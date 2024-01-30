@@ -9,8 +9,9 @@ import {
 } from "@/components/ui/resizable"
 import { Separator } from "@/components/ui/separator";
 import { FaBus } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import React from "react";
 
 
 
@@ -23,7 +24,7 @@ export default function page() {
 
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     const getData = () => {
       setInterval(() => {
         setLoading(false)
