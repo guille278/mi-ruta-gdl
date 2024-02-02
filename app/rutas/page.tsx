@@ -9,22 +9,22 @@ import {
 } from "@/components/ui/resizable"
 import { Separator } from "@/components/ui/separator";
 import { FaBus } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import React from "react";
 
 
 
 
 export default function page() {
   const [loading, setLoading] = useState(true)
+  const [active, setActive] = useState(null)
 
   const handleClick = (e: React.MouseEvent, routeId: string) => {
     console.log(routeId);
 
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     const getData = () => {
       setInterval(() => {
         setLoading(false)
@@ -81,7 +81,7 @@ export default function page() {
         <ResizablePanel defaultSize={75} className="">
           <div className="w-full h-screen p-2">
 
-            <Map />
+            
           </div>
         </ResizablePanel>
       </ResizablePanelGroup>
